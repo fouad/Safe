@@ -82,11 +82,6 @@ function safe_errorsoff(){
     echo '<span class="pass">WordPress DB Errors turned off.</span><br />';
 }
 
-function safe_wpdberrors()
-{
-    global $wpdb;
-    $wpdb->show_errors = false;
-}
 
 function safe_version_removal(){
     global $wp_version;

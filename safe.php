@@ -23,13 +23,10 @@ if ( ! defined('WP_PLUGIN_DIR')) {
 
 require_once(WP_PLUGIN_DIR . "/safe/inc/functions.php");
 
-add_action('admin_head', 'safe_hd');
-add_action('admin_init', 'wps_admin_init_load_resources');
-add_action("init",'safe_wpdberrors',1);
-add_action("parse_query",'safe_wpdberrors',1);
-add_action('admin_menu', 'add_men_bpg');
-add_action('admin_init','safe_admin_init');
 add_filter('admin_footer_text', 'remove_footer_admin');
+add_action('admin_init','safe_admin_init');
+add_action('admin_menu', 'add_menu_bpg');
+remove_action('wp_head', 'wp_generator');
 
 function remove_footer_admin () {
     echo "Thank you for creating with <a href='http://wordpress.org'>WordPress</a>. Also, thank you for using the Safe security plugin by <a href='http://fouadmat.in'>Fouad Matin</a>.";
@@ -39,8 +36,7 @@ function safe_admin_init(){
     wp_enqueue_style('safe_style', plugin_dir_url(__FILE__) . 'css/safe.css');
 }
 
-remove_action('wp_head', 'wp_generator');
-function add_men_bpg()
+function add_menu_bpg()
 {
     if (!current_user_can('administrator')){return false;}
 
@@ -87,6 +83,7 @@ function safe_meta_box()
     </div>
 <?php
 }
+
 function safe_meta_box2()
 {
 ?>
@@ -95,26 +92,28 @@ function safe_meta_box2()
     </ul>
 <?php
 }
-function safe_main() {
+
+function safe_main() 
+{
 
             add_meta_box("safe_box_1", 'Basic Checks', "safe_meta_box", "box1");
             add_meta_box("safe_box_2", 'System Information', "safe_meta_box2", "box2");
 
-echo '  
+        echo '  
             <div class="metabox-holder">
                 <div style="float:left; width:48%;" class="inner-sidebar1">';
          
                     do_meta_boxes('box1','advanced','');      
 
-echo '      
+        echo '      
                 </div>
                 <div style="float:right;width:48%;" class="inner-sidebar1">';
                     do_meta_boxes('box2','advanced','');  
-echo '  
+        echo '  
                 </div>
                         
                 <div style="clear:both"></div>
             </div>';
 
-    }
+}
 ?>
