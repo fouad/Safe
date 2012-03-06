@@ -1,7 +1,4 @@
-/********************************************************
- * BEGIN >> General styling
-*/
-p.alfred-error-summary {
+p.safe-error-summary {
 	background-color: #F9EFAC;
 	border: 1px dotted #f00;
 	color: #DC143C;
@@ -11,7 +8,7 @@ p.alfred-error-summary {
 	cursor: default;
 }
 
-span.alfred-error-summary-detail {
+span.safe-error-summary-detail {
 	color: #000;
 	font-weight: normal;
 	font-size: 11px;
@@ -19,7 +16,7 @@ span.alfred-error-summary-detail {
 }
 
 
-p.alfred-success-summary {
+p.safe-success-summary {
 	background-color: #90EE90;
 	border: 1px dotted #f00;
 	color: #000;
@@ -29,7 +26,7 @@ p.alfred-success-summary {
 	cursor: default;
 }
 
-span.alfred-success-summary-detail {
+span.safe-success-summary-detail {
 	color: #000;
 	font-weight: normal;
 	font-size: 11px;
@@ -37,319 +34,34 @@ span.alfred-success-summary-detail {
 }
 
 
-p.alfred-login-notice {
+p.safe-login-notice {
 	font-weight: bold;
 	color: #000;
 	margin-top: -10px;
 	margin-bottom: 20px;
 }
 
-.alfred-inside {
+.safe-inside {
 	padding: 10px;
     font-family: Verdana, Arial, sans-serif !important;
     font-size: 100% !important;
 }
 
-p.alfred-error-summary a, .alfred-inside a {
+p.safe-error-summary a, .safe-inside a {
 	color: #CC0000;
 	text-decoration: none;
 }
 
-p.alfred-error-summary a:hover, .alfred-inside a:hover {
+p.safe-error-summary a:hover, .safe-inside a:hover {
 	color: #CC0000;
 	text-decoration: underline;
 }
-
-/********************************************************
- * BEGIN >> Login form styling
-*/
-#alfredss_login_form {
-	margin: 0px;
+div.pass,span.pass {
+	color:#7AB317;
 }
-
-#alfredss_login_form .alfred-login-section {
-	display: block;
-	float: left;
-	width: 100%;
-	margin-bottom: 5px;
+div.fail,span.fail {
+	color:#ff3333;
 }
-
-#alfredss_login_form .alfred-login-section label {
-	display: block;
-	float: left;
-	width: 70px;
-	padding-top: 6px;
-}
-
-#alfredss_login_form .alfred-login-section input {
-	display: block;
-	width: 200px;
-	float: left;
-}
-
-#alfredss_login_form #alfred-login {
-	clear: left;
-	margin-left: 70px;
-}
-
-
-
-/********************************************************
- * BEGIN >> Registration form styling
-*/
-#alfred_new_user_form {
-	margin: 0px;
-}
-
-#alfred_new_user_form .alfred-new-user-section {
-	display: block;
-	float: left;
-	width: 100%;
-	margin-bottom: 5px;
-}
-
-#alfred_new_user_form .alfred-new-user-section label {
-	display: block;
-	float: left;
-	width: 120px;
-	padding-top: 6px;
-}
-
-#alfred_new_user_form .alfred-new-user-section input {
-	display: block;
-	width: 200px;
-	float: left;
-}
-
-#alfred_new_user_form #alfred-login {
-	clear: left;
-	margin-left: 70px;
-}
-
-
-
-/********************************************************
- * BEGIN >> Initial scan widget styling
-*/
-#alfred-information-scan-list {
-	list-style-type: disc;
-	margin: 10px;
-	padding-left: 20px;
-}
-
-
-
-#alfred-initial-scan { }
-
-#alfred-initial-scan .alfred-initial-scan-section {
-	line-height: 1.4em;
-	display: block;
-    color: #090;
-}
-
-
-/********************************************************
- * BEGIN >> Target update form styling
-*/
-#alfred_target_id_form {
-	width: 100%;
-}
-
-#alfred_target_id_form #targetid {
-	width: 300px;
-}
-
-
-
-/********************************************************
- * BEGIN >> Status content styling
-*/
-div#alfred-target-status-holder {
-	overflow: hidden;
-}
-
-p.alfred-target-status-title {
-	font-weight: bold;
-}
-
-div.alfred-target-status-section {
-	display: block;
-	float: left;
-	margin-right: 5px;
-}
-
-span.alfred-target-status-section-label {
-	display: block;
-	padding: 5px 4px;
-	float: left;
-	color: #999999
-}
-
-span.alfred-target-status-section-enabled {
-	display: block;
-	padding: 5px 0px;
-	background-color: #0f0;
-	color: #000;
-	float: left;
-	width: 50px;
-	height: 24px;
-	        border-radius: 3px;
-	   -moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	text-align: center;
-	font-weight: bold;
-
-	background: url('../images/agent-green.png') no-repeat scroll left top transparent;
-}
-
-span.alfred-target-status-section-disabled {
-	display: block;
-	padding: 5px 0px;
-	background-color: #f00;
-	color: #fff;
-	float: left;
-	width: 50px;
-	height: 24px;
-	        border-radius: 3px;
-	   -moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	text-align: center;
-	font-weight: bold;
-
-	background: url('../images/agent-red.png') no-repeat scroll left top transparent;
-}
-
-
-
-
-/********************************************************
- * BEGIN >> Password meter styling
-*/
-#alfred_new_user_form label.password-meter {
-	display: none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	font-weight: bolder;
-	border-radius: 3px;
-	text-align: center;
-	font-size: 12px;
-	color: #000;
-	width: 80px;
-	margin-left: 20px;
-	padding: 4px;
-	cursor: default;
-}
-
-
-/*
-* 3.0.2
-*/
-.scanpass { color: #090; }
-
-.mrt_wpss_note {
-	text-align: center;
-	color: grey;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.wpss_icon {
-	margin-top: 10px !important;
-    padding: 5px 0 3px 50px !important;
-}
-
-.alfred_user_notify {
-    border: solid 1px #fc0; background: #ffc;
-    padding: 5px 5px;
-    font-size: 100%;
-}
-.alfred_user_information {
-    border: solid 1px #324FB2; background: #E5EAF0;
-    padding: 5px 5px;
-    font-size: 100%;
-}
-.alfred_user_success {
-    border: solid 1px #030; background: #090;
-    padding: 5px 5px;
-    font-size: 100%;
-    color: #fff;
-}
-.alfred_info_list {
-    list-style-type: disc;
-    list-style-position: outside;
-    margin: 0 0 10px 25px;
-}
-div.alfred_user_information, div.alfred_user_notify, div.alfred_user_success { margin: 1em 0 !important; }
-
-#Words { overflow: hidden; min-height: 1px; margin: 0 0 0 0 !important; padding: 0 0 0 0 !important; }
-#Words p { float: left; display: block; width: 150px; line-height: normal !important; padding: 0 0 0 0; margin: 6px 0 0 0 !important; }
-#Words p.indicator { height: 4px; }
-#Words p.indicator-1 { background: #f00;}
-#Words p.indicator-2 { background: #990000; }
-#Words p.indicator-3 { background: #990099; }
-#Words p.indicator-4 { background: #000099; }
-#Words p.indicator-5 { background: #0000ff; }
-#Words p.indicator-6 { background: #ffffff; }
-#Words p+p {margin: 0 0 0 5px !important; padding: 0 0 0 0 !important; line-height: normal !important;}
-#alfred_pwdtool { margin-top: 10px; }
-
-.alfred_commonList {
-    list-style-type: none;
-    margin: 0 0 10px 0;
-    padding-left: 0;
-}
-.alfred_commonList li {
-    font-style: italic !important;
-    background: url('../images/alfred-logo-small-list.png') no-repeat 0 50%;
-    padding: 2px 0 2px 20px !important;
-}
-
-.alfred-inside p, .alfred-inside ul, .alfred-inside ol, .alfred-inside blockquote, .alfred-inside input, .alfred-inside select {
-    font-size: 100%;
-}
-
-.alfred-inside, .alfred-inside p, .alfred-inside li, .alfred-inside dl, .alfred-inside dd, .alfred-inside dt {
-    line-height: normal !important;
-}
-
-#alfred_db_wrapper .inner-sidebar1 { margin: 10px 10px 0  10px; }
-#alfred_db_wrapper, #alfred_db_wrapper .metabox-holder {overflow:hidden; min-height:1px; }
-#alfred_permissions_table { margin: 15px 0; }
-#alfred_permissions_table th,
-#alfred_permissions_table td { text-align: left; }
-#alfred_permissions_table td { padding: 1px 7px;}
-#alfred_tables_list_block { clear: both;}
-
-.alfred_cursor_help { cursor: help; border-bottom: dotted 1px #000; }
-
-.wswdwp-tooltip {
-    cursor: pointer;
-    margin-left: 15px;
-    color: #21759B;
-}
-
-#tt {
- position:absolute;
- display:block;
- }
- #tttop {
- display:block;
- height:5px;
- margin-left:5px;
- background:url("../images/tooltips/tt_top.gif") top right no-repeat;
- overflow:hidden;
- }
- #ttcont {
- display:block;
- padding:2px 12px 3px 12px;
- margin-left:5px;
- background:#666;
- color:#fff;
- }
-#ttbot {
-display:block;
-height:5px;
-margin-left:5px;
-background:url("../images/tooltips/tt_bottom.gif") top right no-repeat;
-overflow:hidden;
+div.fail,span.fail a{
+	color:#ff3333;
 }
