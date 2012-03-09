@@ -24,7 +24,7 @@ if ( ! defined('WP_PLUGIN_DIR')) {
 require_once(WP_PLUGIN_DIR . "/safe/inc/functions.php");
 
 add_filter('admin_footer_text', 'remove_footer_admin');
-add_action('admin_init','safe_admin_init');
+add_action('admin_enqueue_scripts','safe_styles');
 add_action('admin_menu', 'add_menu_bpg');
 remove_action('wp_head', 'wp_generator');
 
@@ -32,7 +32,7 @@ function remove_footer_admin () {
     echo "Thank you for creating with <a href='http://wordpress.org'>WordPress</a>. Also, thank you for using the Safe security plugin by <a href='http://fouadmat.in'>Fouad Matin</a>.";
 } 
 
-function safe_admin_init(){
+function safe_styles(){
     wp_enqueue_style('safe_style', plugin_dir_url(__FILE__) . 'css/safe.css');
 }
 
